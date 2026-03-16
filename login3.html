@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Login</title>
+</head>
+<body>
+<h2>Guest Login</h2>
+<form onsubmit="return guestLogin()">
+<input type="text" id="guestuser" placeholder="Username"><br><br>
+<input type="password" id="guestpass" placeholder="Password"><br><br>
+<button type="submit">Login</button>
+</form>
+
+<script>function guestLogin(){
+var user=document.getElementById("guestuser").value;
+var pass=document.getElementById("guestpass").value;
+if(user=="guest" && pass=="guest123"){
+alert("Guest Login Successful");
+window.location="welcomeguest.html";
+}
+else if(user=="guest"){
+alert("Wrong Password");
+}
+else{
+alert("Invalid User");
+}
+return false;
+}</script>
+</body>
+</html>

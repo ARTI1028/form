@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2>Student Login</h2>
+<form onsubmit="return studentLogin()">
+<input type="text" id="studentuser" placeholder="Username"><br><br>
+<input type="password" id="studentpass" placeholder="Password"><br><br>
+<button type="submit">Login</button>
+</form>
+
+
+<script>function studentLogin(){
+var user=document.getElementById("studentuser").value;
+switch(user){
+case "student":
+alert("Student Login Successful");
+window.location="welcomestudent.html";
+break;
+default:
+alert("Invalid Student Login");
+}
+return false;
+}</script>
+</body>
+</html>
